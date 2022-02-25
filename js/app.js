@@ -20,14 +20,17 @@ const searchFood = (meals) => {
     div.classList.add("col");
     div.innerHTML = `
             <div class="card">
-              <img src="${meal.strMealThumb.slice(
-                0,
-                100
-              )}" class="card-img-top" alt="..." />
+              <img src="${meal.strMealThumb}" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">${meal.strMeal}</h5>
-                <p class="card-text">${meal.strInstructions}</p>
-                <a href="#" class="btn btn-light">See details</a>
+                <p class="card-text">${meal.strInstructions.slice(
+                  0,
+                  100
+                )}...</p>
+                <button type="button"
+                class="btn btn-light"
+                data-bs-toggle="modal"
+                data-bs-target="#see-details">See details</button>
               </div>
             </div>
     `;

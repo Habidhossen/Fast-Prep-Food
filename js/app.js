@@ -6,16 +6,15 @@ const searchButton = () => {
   } else {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
       .then((response) => response.json())
-      .then((data) => searchFood(data.meals));
+      .then((data) => displayMeal(data.meals));
 
     // clear input field
     input.value = "";
   }
 };
-const searchFood = (meals) => {
+const displayMeal = (meals) => {
   const resultContainer = document.getElementById("result-container");
   for (const meal of meals) {
-    console.log(meal);
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
@@ -27,13 +26,37 @@ const searchFood = (meals) => {
                   0,
                   100
                 )}...</p>
-                <button type="button"
+                <button 
+                onclick="loadMealDetails(${meal.idMeal})" 
+                type="button"
                 class="btn btn-light"
                 data-bs-toggle="modal"
                 data-bs-target="#see-details">See details</button>
               </div>
             </div>
     `;
+    // clear result
+    resultContainer.innerHTML = "";
     resultContainer.appendChild(div);
   }
+};
+const loadMealDetails = (mealId) => {
+  fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+    .then((response) => response.json())
+    .then((data) => displayMealDetails(data.meals[0]));
+};
+const displayMealDetails = (meal) => {
+  console.log(meal);
+  const modalContant = document.getElementById("modal-content");
+  const div = document.createElement("div");
+  div.classList.add("p-0");
+  div.innerHTML = `
+
+  <h5>${meal.strMeal}</h5>
+  <P>${meal.strCategory}</P>
+  <P>${meal.strArea}</P>
+  <P>${meal.strInstructions}</P>
+
+  `;
+  modalContant.appendChild(div);
 };

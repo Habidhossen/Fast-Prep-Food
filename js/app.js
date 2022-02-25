@@ -35,8 +35,6 @@ const displayMeal = (meals) => {
               </div>
             </div>
     `;
-    // clear result
-    resultContainer.innerHTML = "";
     resultContainer.appendChild(div);
   }
 };
@@ -49,14 +47,25 @@ const displayMealDetails = (meal) => {
   console.log(meal);
   const modalContant = document.getElementById("modal-content");
   const div = document.createElement("div");
-  div.classList.add("p-0");
+  div.classList.add("div");
   div.innerHTML = `
-
-  <h5>${meal.strMeal}</h5>
-  <P>${meal.strCategory}</P>
-  <P>${meal.strArea}</P>
-  <P>${meal.strInstructions}</P>
-
+                <div class="modal-header">
+                  <h5 class="modal-title" id="see-details">${meal.strMeal}</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <img class="img-fluid w-100 rounded-3 mb-3" src="${meal.strMealThumb}" alt="" />
+                <p><b>Types:</b> ${meal.strCategory}</p>
+                <p><b>Country:</b> ${meal.strArea}</p>
+                <p><b>Instruction:</b> ${meal.strInstructions}</p>
+                <a class="btn btn-danger btn-sm" href="${meal.strYoutube}">Go to youtube</a>
+                </div>
   `;
+
+  modalContant.textContent = "";
   modalContant.appendChild(div);
 };

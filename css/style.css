@@ -1,3 +1,24 @@
+/* ------------------------------
+    Reset all deafault styles
+------------------------------*/
 * {
-  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Pacifico", cursive;
+}
+/* ------------------------------
+  Common styles or Utilities
+------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+/* ------------------------------
+    Declare styles variable
+------------------------------*/
+:root {
+  --primary-color: #f54748;
+  --primary-dark-color: #2e2e2e;
+  --secondary-dark-color: #595959;
 }

@@ -25,6 +25,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
 /* ------------------------------
         Nav and Navbar
 ------------------------------*/
@@ -52,6 +53,10 @@ html {
 /* ------------------------------
             Banner
 ------------------------------*/
+.banner-section {
+  margin-top: 40px;
+  height: 100vh;
+}
 .banner-title {
   font-weight: 600;
   font-size: 60px;
@@ -69,6 +74,7 @@ html {
   font-size: 20px;
   line-height: 36px;
   color: var(--secondary-dark-color);
+  margin: 16px 0;
 }
 .search-btn {
   padding: 8px 25px;
@@ -93,4 +99,38 @@ html {
   border-color: var(--primary-color);
   box-shadow: inset 0 1px 1px rgba(71, 255, 47, 0.075),
     0 0 8px rgba(255, 27, 27, 0.6);
+}
+/* ------------------------------
+       Watch video section
+------------------------------*/
+.watch-video-container img {
+  border-radius: 8px;
+}
+.watch-video-container h1 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 58px;
+  color: var(--primary-dark-color);
+}
+.watch-video-container p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--secondary-dark-color);
+  margin: 16px 0 20px 0;
+}
+.explore-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.explore-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }

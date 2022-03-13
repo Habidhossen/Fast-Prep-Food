@@ -55,7 +55,7 @@ html {
 ------------------------------*/
 .banner-section {
   margin-top: 40px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 .banner-title {
   font-weight: 600;

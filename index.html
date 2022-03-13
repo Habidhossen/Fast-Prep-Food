@@ -12,6 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/955a413869.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -19,14 +24,14 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <!-- Connect CSS -->
+    <!-- Vanilla CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="#">Fast Pred'd Food</a>
+          <a class="navbar-brand" href="#">Fast Pred'd <span>Food</span></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -59,8 +64,11 @@
         <div class="container">
           <div class="row row-cols-2 align-items-center">
             <div class="col">
-              <h1>Let's Start Cooking With Popular Recipes</h1>
-              <p>
+              <h1 class="banner-title">
+                Let's Start <br />Cooking With<br />
+                Popular <span>Recipes</span>
+              </h1>
+              <p class="banner-text">
                 Want to learn cook but confused how to start? No need to worry
                 again!
               </p>
@@ -73,8 +81,9 @@
                   aria-label="Recipient's username"
                   aria-describedby="button-addon2"
                 />
-                <button class="btn btn-danger" type="button" id="button-addon2">
-                  Search
+                <button class="search-btn" type="button" id="button-addon2">
+                  <i class="fa-solid fa-magnifying-glass"></i
+                  ><span class="ms-2">Search</span>
                 </button>
               </div>
             </div>

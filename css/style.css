@@ -5,14 +5,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Fira Sans", sans-serif;
-  /* font-family: "Pacifico", cursive; */
-}
-/* ------------------------------
-  Common styles or Utilities
-------------------------------*/
-html {
-  scroll-behavior: smooth;
 }
 /* ------------------------------
     Declare styles variable
@@ -21,4 +13,84 @@ html {
   --primary-color: #f54748;
   --primary-dark-color: #2e2e2e;
   --secondary-dark-color: #595959;
+  --white-color: #fff;
+}
+/* ------------------------------
+  Common styles or Utilities
+------------------------------*/
+body {
+  font-family: "Fira Sans", sans-serif;
+  /* font-family: "Pacifico", cursive; */
+}
+html {
+  scroll-behavior: smooth;
+}
+/* ------------------------------
+        Nav and Navbar
+------------------------------*/
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  color: var(--primary-dark-color);
+}
+.navbar-brand span {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  color: var(--primary-color);
+}
+.navbar-brand:hover {
+  color: var(--primary-dark-color);
+}
+.nav-item .nav-link {
+  color: var(--primary-dark-color);
+  font-size: 16px;
+  font-weight: 500;
+}
+.nav-item .nav-link:hover {
+  color: var(--primary-color);
+}
+/* ------------------------------
+            Banner
+------------------------------*/
+.banner-title {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 84px;
+  color: var(--primary-dark-color);
+}
+.banner-title span {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 84px;
+  color: var(--primary-color);
+}
+.banner-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  color: var(--secondary-dark-color);
+}
+.search-btn {
+  padding: 8px 25px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid transparent;
+  border-radius: 0 8px 8px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.search-btn:hover {
+  background-color: #e73434;
+  border: 1px solid var(--primary-color);
+}
+.form-control {
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: inset 0 1px 1px rgba(71, 255, 47, 0.075),
+    0 0 8px rgba(255, 27, 27, 0.6);
 }

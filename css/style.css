@@ -134,3 +134,46 @@ html {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
+.custom-card {
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  box-shadow: 5px 5px 20px rgba(133, 133, 133, 0.2);
+  border-radius: 10px;
+}
+.card-image {
+  height: 100%;
+  /* width: 100%; */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+.custom-card-badge {
+  background-color: #ffebee;
+  color: #e57373;
+  border-radius: 50px;
+  /* border: 1px solid #e57373; */
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.custom-card-title {
+  font-size: 16px;
+  margin: 10px 0 20px 0;
+}
+.custom-card-btn {
+  padding: 6px 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.custom-card-btn:hover {
+  background-color: #e73434;
+  border: 1px solid var(--primary-color);
+}

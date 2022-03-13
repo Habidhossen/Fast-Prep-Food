@@ -23,16 +23,73 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Fast Pred'd Food</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Meals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Drinks</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="banner-section">
+        <div class="container">
+          <div class="row row-cols-2 align-items-center">
+            <div class="col">
+              <h1>Let's Start Cooking With Popular Recipes</h1>
+              <p>
+                Want to learn cook but confused how to start? No need to worry
+                again!
+              </p>
+              <div class="btn btn-danger">Explore Food</div>
+            </div>
+            <div class="col">
+              <img class="img-fluid" src="images/food-cover-02.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
 
-    <main>
+    <!-- <main>
       <div class="container">
-        <!-- Heading area -->
         <h1 class="text-center m-4">Welcome to Fast Prep Food</h1>
 
-        <!-- Search area -->
         <div class="d-flex my-4">
           <input
             id="input-value"
@@ -50,12 +107,11 @@
           </button>
         </div>
 
-        <!-- Result area -->
-        <div id="result-container" class="row row-cols-1 row-cols-lg-3 gy-4">
-          <!-- Showing result -->
-        </div>
+        <div
+          id="result-container"
+          class="row row-cols-1 row-cols-lg-3 gy-4"
+        ></div>
 
-        <!-- Modal -->
         <div
           class="modal fade"
           id="see-details"
@@ -65,16 +121,12 @@
         >
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div id="modal-content" class="modal-content">
-              <div>
-                <!-- Showing meal details -->
-              </div>
+              <div></div>
             </div>
           </div>
         </div>
-
-        <!-- Check... -->
       </div>
-    </main>
+    </main> -->
 
     <!-- Bootstarp JS cdn -->
     <script

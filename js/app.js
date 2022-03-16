@@ -1,4 +1,6 @@
-// Random Meal
+/* ----------------------------------
+      Showing Random Meal
+---------------------------------- */
 const url = "https://www.themealdb.com/api/json/v1/1/random.php";
 fetch(url)
   .then((response) => response.json())
@@ -13,7 +15,9 @@ const displayRandomMeal = (meal) => {
   document.getElementById("randomMealImage").src = meal.strMealThumb;
 };
 
-// search
+/* ----------------------------------
+          Search Meal
+---------------------------------- */
 const searchButton = () => {
   const input = document.getElementById("input-value");
   const inputValue = input.value;
@@ -23,7 +27,6 @@ const searchButton = () => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
       .then((response) => response.json())
       .then((data) => displayMeal(data.meals));
-
     // clear input field
     input.value = "";
   }
@@ -34,21 +37,26 @@ const displayMeal = (meals) => {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
-            <div class="card">
-              <img src="${meal.strMealThumb}" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">${meal.strMeal}</h5>
-                <p class="card-text">${meal.strInstructions.slice(
-                  0,
-                  100
-                )}...</p>
-                <button 
-                onclick="loadMealDetails(${meal.idMeal})" 
-                type="button"
-                class="btn btn-light"
-                data-bs-toggle="modal"
-                data-bs-target="#see-details">See details</button>
-              </div>
+            <div class="custom-card h-100">
+                <div class="">
+                  <img
+                    class="img-fluid custom-card-img"
+                    src="${meal.strMealThumb}"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body p-0">
+                  <div class="badge-div d-flex justify-content-between">
+                    <span class="meal-category-badge">${meal.strCategory}</span>
+                    <span class="meal-area-badge">${meal.strArea}</span>
+                  </div>
+                  <div class="custom-card-title">
+                    <h1>${meal.strMeal}</h1>
+                  </div>
+                </div>
+                <div class="custom-card-footer">
+                  <button onclick="loadMealDetails(${meal.idMeal})" class="custom-card-btn w-100">Explore</button>
+                </div>
             </div>
     `;
     resultContainer.appendChild(div);

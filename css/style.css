@@ -121,7 +121,7 @@ html {
   font-size: 18px;
   line-height: 32px;
   color: var(--secondary-dark-color);
-  margin: 16px 0 20px 0;
+  margin: 20px 0 26px 0;
 }
 .explore-btn {
   padding: 10px 20px;
@@ -144,7 +144,42 @@ html {
 #special-dishes-section {
   margin-top: 100px;
 }
-
+.special-title {
+  font-family: "Pacifico", cursive;
+  text-align: center;
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--primary-dark-color);
+}
+.special-title span {
+  font-family: "Pacifico", cursive;
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--primary-color);
+}
+.special-text {
+  font-weight: 400;
+  font-size: 20px;
+  /* line-height: 36px; */
+  color: var(--secondary-dark-color);
+  margin: 16px 0 28px 0;
+}
+.special-dishes-container h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  color: var(--primary-dark-color);
+}
+.special-dishes-container p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--secondary-dark-color);
+  margin: 20px 0 20px 0;
+}
+.special-dishes-container img {
+  border-radius: 8px;
+}
 /* ------------------------------
     Popular menu section
 ------------------------------*/

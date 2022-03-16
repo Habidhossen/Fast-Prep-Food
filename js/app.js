@@ -1,3 +1,19 @@
+// Random Meal
+const url = "https://www.themealdb.com/api/json/v1/1/random.php";
+fetch(url)
+  .then((response) => response.json())
+  .then((data) => displayRandomMeal(data.meals[0]));
+
+const displayRandomMeal = (meal) => {
+  document.getElementById("randomMealCategory").innerText = meal.strCategory;
+  document.getElementById("randomMealArea").innerText = meal.strArea;
+  document.getElementById("randomMealName").innerText = meal.strMeal;
+  document.getElementById("randomMealInstruction").innerText =
+    meal.strInstructions.slice(0, 200) + " ...";
+  document.getElementById("randomMealImage").src = meal.strMealThumb;
+};
+
+// search
 const searchButton = () => {
   const input = document.getElementById("input-value");
   const inputValue = input.value;

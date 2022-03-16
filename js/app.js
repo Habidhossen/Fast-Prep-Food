@@ -92,15 +92,117 @@ const displayMealDetails = (meal) => {
                       src="${meal.strMealThumb}"
                       alt=""
                     />
+                    <p><strong>Category:</strong> ${meal.strCategory}</p>
+                    <p><strong>Area:</strong> ${meal.strArea}</p>
+                    <p class="mb-3"><strong>Tags:</strong> ${
+                      meal.strTags ? meal.strTags : "Meal"
+                    }</p>
+                    <a
+                      target="_blank"
+                      href="${meal.strYoutube}"
+                      class="modal-video-btn mt-5">
+                      Watch Receipe
+                      <span class="ms-1"
+                        ><i class="fa-solid fa-circle-play"></i
+                      ></span>
+                    </a>
                   </div>
                   <div class="col-7">
                     <h1>${meal.strMeal}</h1>
-                    <p><strong>Category:</strong> ${meal.strCategory}</p>
-                    <p><strong>Area:</strong> ${meal.strArea}</p>
-                    <p><strong>Ingredients:</strong> ${meal.strMealThumb}</p>
+
+                    <table class="table table-bordered table-sm">
+                    <thead>
+                      <tr>
+                        <th scope="col">Ingredients</th>
+                        <th scope="col">Measure</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>${meal?.strIngredient1}</td>
+                        <td>${meal?.strMeasure1}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient2}</td>
+                        <td>${meal?.strMeasure2}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient3}</td>
+                        <td>${meal?.strMeasure3}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient4}</td>
+                        <td>${meal?.strMeasure4}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient5}</td>
+                        <td>${meal?.strMeasure5}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient6}</td>
+                        <td>${meal?.strMeasure6}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient7}</td>
+                        <td>${meal?.strMeasure7}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient8}</td>
+                        <td>${meal?.strMeasure8}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient9}</td>
+                        <td>${meal?.strMeasure9}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient10}</td>
+                        <td>${meal?.strMeasure10}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient11}</td>
+                        <td>${meal?.strMeasure11}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient12}</td>
+                        <td>${meal?.strMeasure12}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient13}</td>
+                        <td>${meal?.strMeasure13}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient14}</td>
+                        <td>${meal?.strMeasure14}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient15}</td>
+                        <td>${meal?.strMeasure15}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient16}</td>
+                        <td>${meal?.strMeasure16}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient17}</td>
+                        <td>${meal?.strMeasure17}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient18}</td>
+                        <td>${meal?.strMeasure18}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient19}</td>
+                        <td>${meal?.strMeasure19}</td>
+                      </tr>
+                      <tr>
+                        <td>${meal?.strIngredient20}</td>
+                        <td>${meal?.strMeasure20}</td>
+                      </tr>
+                    </tbody>
+                  </table>
                   </div>
                 </div>
-                <div class="row mt-4">
+                <div class="row mt-3">
                   <div class="col-12">
                     <p>
                       <strong>Instruction:</strong> ${meal.strInstructions}

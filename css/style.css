@@ -285,11 +285,31 @@ html {
   font-weight: 600;
   font-size: 30px;
   color: var(--primary-dark-color);
-  margin-bottom: 14px;
+  margin-bottom: 24px;
 }
 .modal-body p {
   font-weight: 400;
   font-size: 16px;
   color: var(--primary-dark-color);
   margin: 10px 0;
+}
+.modal-video-btn {
+  padding: 8px 20px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.modal-video-btn:hover {
+  background-color: var(--dark-red);
+  color: var(--white-color);
+}
+.table {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary-dark-color);
 }

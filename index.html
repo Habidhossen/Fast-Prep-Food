@@ -121,8 +121,8 @@
                 famoud chef, with cooking steps and with good taste
               </p>
               <button class="explore-btn">
-                <span class="me-2">Explore Video</span
-                ><i class="fa-solid fa-circle-play"></i>
+                <span class="me-2">Explore Recipe</span
+                ><i class="fa-solid fa-arrow-right-long"></i>
               </button>
             </div>
           </div>
@@ -150,12 +150,17 @@
               </div>
               <h1 id="randomMealName"></h1>
               <p id="randomMealInstruction"></p>
-              <button class="explore-btn">
-                Explore Recipe
+              <a
+                target="_blank"
+                href=""
+                id="randomMealVideoBtn"
+                class="explore-btn"
+              >
+                Explore Video
                 <span class="ms-2"
-                  ><i class="fa-solid fa-arrow-right-long"></i
+                  ><i class="fa-solid fa-circle-play"></i
                 ></span>
-              </button>
+              </a>
             </div>
             <div class="col">
               <img
@@ -293,67 +298,27 @@
 
       <!-- modal section -->
       <!-- Button trigger modal -->
-      <button
+      <!-- <button
         type="button"
         class="btn btn-primary"
         data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
+        data-bs-target="#modal"
       >
         Launch static backdrop modal
-      </button>
+      </button> -->
 
       <!-- Modal -->
       <div
         class="modal fade"
-        id="staticBackdrop"
+        id="modal"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
         <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="col-5">
-                  <img
-                    class="img-fluid rounded-3"
-                    src="images/food-cover-03.png"
-                    alt=""
-                  />
-                </div>
-                <div class="col-7">
-                  <h4>Hello</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    qui magni vitae temporibus voluptas accusamus recusandae
-                    explicabo consequuntur perferendis maiores.
-                  </p>
-                </div>
-              </div>
-              <div class="row mt-4">
-                <div class="col-12">
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Nostrum aspernatur dicta, perferendis ducimus sint at eius
-                    delectus maiores aliquid! delectus maiores aliquid!em ipsum,
-                    dolor sit amet consectetur adipisicing elit. Nostrum
-                    aspernatur dicta, perferendis ducimus sint at eius delectus
-                    maiores aliquid! delectus maiores aliquid!
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div id="modal-content" class="modal-content">
+            <!-- modal content here... -->
           </div>
         </div>
       </div>

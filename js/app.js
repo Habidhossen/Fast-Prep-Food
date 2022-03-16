@@ -13,6 +13,7 @@ const displayRandomMeal = (meal) => {
   document.getElementById("randomMealInstruction").innerText =
     meal.strInstructions.slice(0, 200) + " ...";
   document.getElementById("randomMealImage").src = meal.strMealThumb;
+  document.getElementById("randomMealVideoBtn").href = meal.strYoutube;
 };
 
 /* ----------------------------------
@@ -55,7 +56,8 @@ const displayMeal = (meals) => {
                   </div>
                 </div>
                 <div class="custom-card-footer">
-                  <button onclick="loadMealDetails(${meal.idMeal})" class="custom-card-btn w-100">Explore</button>
+                  <button data-bs-toggle="modal"
+                  data-bs-target="#modal" onclick="loadMealDetails(${meal.idMeal})" class="custom-card-btn w-100">Explore</button>
                 </div>
             </div>
     `;
@@ -63,6 +65,7 @@ const displayMeal = (meals) => {
   }
 };
 const loadMealDetails = (mealId) => {
+  console.log(mealId);
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then((response) => response.json())
     .then((data) => displayMealDetails(data.meals[0]));
@@ -73,21 +76,38 @@ const displayMealDetails = (meal) => {
   const div = document.createElement("div");
   div.classList.add("div");
   div.innerHTML = `
-                <div class="modal-header">
-                  <h5 class="modal-title" id="see-details">${meal.strMeal}</h5>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-5">
+                    <img
+                      class="img-fluid rounded-3"
+                      src="${meal.strMealThumb}"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-7">
+                    <h1>${meal.strMeal}</h1>
+                    <p><strong>Category:</strong> ${meal.strCategory}</p>
+                    <p><strong>Area:</strong> ${meal.strArea}</p>
+                    <p><strong>Ingredients:</strong> ${meal.strMealThumb}</p>
+                  </div>
                 </div>
-                <div class="modal-body">
-                <img class="img-fluid w-100 rounded-3 mb-3" src="${meal.strMealThumb}" alt="" />
-                <p><b>Types:</b> ${meal.strCategory}</p>
-                <p><b>Country:</b> ${meal.strArea}</p>
-                <p><b>Instruction:</b> ${meal.strInstructions}</p>
-                <a class="btn btn-danger btn-sm" href="${meal.strYoutube}">Go to youtube</a>
+                <div class="row mt-4">
+                  <div class="col-12">
+                    <p>
+                      <strong>Instruction:</strong> ${meal.strInstructions}
+                    </p>
+                  </div>
                 </div>
+              </div>
   `;
 
   modalContant.textContent = "";

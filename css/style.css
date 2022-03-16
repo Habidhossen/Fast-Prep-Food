@@ -243,9 +243,9 @@ html {
 }
 .custom-card-title h1 {
   font-weight: bold;
-  font-size: 16px;
-  color: #363958;
-  margin-bottom: 20px;
+  font-size: 18px;
+  color: var(--primary-dark-color);
+  margin: 20px 0;
 }
 .badge-div {
   margin: 10px 0;
@@ -258,18 +258,6 @@ html {
   padding: 5px 16px;
   font-size: 10px;
   font-weight: 500;
-}
-.custom-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.price h2 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 42px;
-  color: #fabe4c;
 }
 .custom-card-btn {
   padding: 8px 16px;
@@ -292,4 +280,16 @@ html {
 }
 .modal-header {
   border: 0;
+}
+.modal-body h1 {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--primary-dark-color);
+  margin-bottom: 14px;
+}
+.modal-body p {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--primary-dark-color);
+  margin: 10px 0;
 }

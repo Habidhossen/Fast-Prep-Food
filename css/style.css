@@ -270,3 +270,12 @@ html {
   font-size: 12px;
   transition: 0.2s;
 }
+/* ------------------------------
+        Custom Modal
+------------------------------*/
+.modal-content {
+  border-radius: 8px;
+}
+.modal-header {
+  border: 0;
+}

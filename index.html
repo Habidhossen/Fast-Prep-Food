@@ -29,7 +29,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
         <div class="container">
           <a class="navbar-brand" href="#">Fast Pred'd <span>Food</span></a>
           <button
@@ -49,10 +49,15 @@
                 <a class="nav-link" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Meals</a>
+                <a class="nav-link" href="#watch-video-section">Videos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Drinks</a>
+                <a class="nav-link" href="#special-dishes-section"
+                  >Special Dishes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#popular-menu-section">Menu</a>
               </li>
             </ul>
           </div>
@@ -60,7 +65,7 @@
       </nav>
     </header>
     <main>
-      <section class="banner-section">
+      <section id="banner-section">
         <div class="container">
           <div
             class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-3 align-items-center"
@@ -96,7 +101,7 @@
         </div>
       </section>
 
-      <section class="watch-video-section mt-5 mb-5">
+      <section id="watch-video-section">
         <div class="container watch-video-container">
           <div
             class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 g-3 align-items-center"
@@ -119,7 +124,7 @@
         </div>
       </section>
 
-      <section class="special-dishes-section mt-5 mb-5">
+      <section id="special-dishes-section">
         <div class="container">
           <h1 class="text-center">Today's Special Dishes</h1>
           <p class="text-center mb-5">
@@ -147,7 +152,7 @@
         </div>
       </section>
 
-      <section class="popular-menu-section mt-5 mb-5">
+      <section id="popular-menu-section">
         <div class="container">
           <h1 class="text-center">Our Popular Menu</h1>
           <p class="text-center">
@@ -182,67 +187,6 @@
             >
           </div>
 
-          <div
-            class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3 mb-3"
-          >
-            <div class="col">
-              <div class="custom-card">
-                <div class="row">
-                  <div class="col-5">
-                    <img
-                      src="images/video-cover.jpg"
-                      class="img-fluid card-image"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-7">
-                    <span class="custom-card-badge">Seafood</span>
-                    <h5 class="custom-card-title">
-                      Vegetarian Chilli Vegetarian Chilli Vegetarian Chilli
-                    </h5>
-                    <button class="custom-card-btn">View Recipe</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="custom-card">
-                <div class="row">
-                  <div class="col-5">
-                    <img
-                      src="images/video-cover.jpg"
-                      class="img-fluid card-image"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-7">
-                    <span class="custom-card-badge">Seafood</span>
-                    <h5 class="custom-card-title">Vegetarian Chilli</h5>
-                    <button class="custom-card-btn">View Recipe</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="custom-card">
-                <div class="row">
-                  <div class="col-5">
-                    <img
-                      src="images/video-cover.jpg"
-                      class="img-fluid card-image"
-                      alt="..."
-                    />
-                  </div>
-                  <div class="col-7">
-                    <span class="custom-card-badge">Seafood</span>
-                    <h5 class="custom-card-title">Vegetarian Chilli</h5>
-                    <button class="custom-card-btn">View Recipe</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             <div class="col">
               <!-- card start -->
@@ -255,74 +199,18 @@
                   />
                 </div>
                 <div class="card-body p-0">
+                  <div class="badge-div">
+                    <span class="custom-card-badge">Breakfast</span>
+                  </div>
                   <div class="custom-card-title">
                     <h1>Vegetable Chicken Chilli</h1>
                   </div>
-                  <!-- <div class="custom-card-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Culpa dolorem minima eligendi molestiae harum ullam!
-                    </p>
-                  </div> -->
-                </div>
-                <div class="custom-card-footer">
-                  <button class="btn btn-primary w-100">Explore</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <!-- card start -->
-              <div class="custom-card h-100">
-                <div class="">
-                  <img
-                    class="img-fluid custom-card-img"
-                    src="images/video-cover.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="card-body p-0">
-                  <div class="custom-card-title">
-                    <h1>Vegetable Chicken Chilli</h1>
-                  </div>
-                  <!-- <div class="custom-card-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Culpa dolorem minima eligendi molestiae harum ullam!
-                    </p>
-                  </div> -->
-                </div>
-                <div class="custom-card-footer">
-                  <button class="btn btn-primary w-100">Explore</button>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <!-- card start -->
-              <div class="custom-card h-100">
-                <div class="">
-                  <img
-                    class="img-fluid custom-card-img"
-                    src="images/video-cover.jpg"
-                    alt=""
-                  />
-                  <span class="custom-card-badge">Breakfast</span>
-                </div>
-                <div class="card-body p-0">
-                  <!-- <span class="custom-card-badge">Breakfast</span> -->
-                  <div class="custom-card-title">
-                    <h1>Vegetable Chicken Chilli</h1>
-                  </div>
-                  <!-- <div class="custom-card-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Culpa dolorem minima eligendi molestiae harum ullam!
-                    </p>
-                  </div> -->
                 </div>
                 <div class="custom-card-footer">
                   <button class="custom-card-btn w-100">Explore</button>
                 </div>
               </div>
+              <!-- card end -->
             </div>
             <div class="col">
               <!-- card start -->
@@ -335,20 +223,66 @@
                   />
                 </div>
                 <div class="card-body p-0">
+                  <div class="badge-div">
+                    <span class="custom-card-badge">Breakfast</span>
+                  </div>
                   <div class="custom-card-title">
                     <h1>Vegetable Chicken Chilli</h1>
                   </div>
-                  <!-- <div class="custom-card-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Culpa dolorem minima eligendi molestiae harum ullam!
-                    </p>
-                  </div> -->
                 </div>
                 <div class="custom-card-footer">
-                  <button class="btn btn-primary w-100">Explore</button>
+                  <button class="custom-card-btn w-100">Explore</button>
                 </div>
               </div>
+              <!-- card end -->
+            </div>
+            <div class="col">
+              <!-- card start -->
+              <div class="custom-card h-100">
+                <div class="">
+                  <img
+                    class="img-fluid custom-card-img"
+                    src="images/video-cover.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body p-0">
+                  <div class="badge-div">
+                    <span class="custom-card-badge">Breakfast</span>
+                  </div>
+                  <div class="custom-card-title">
+                    <h1>Vegetable Chicken Chilli</h1>
+                  </div>
+                </div>
+                <div class="custom-card-footer">
+                  <button class="custom-card-btn w-100">Explore</button>
+                </div>
+              </div>
+              <!-- card end -->
+            </div>
+            <div class="col">
+              <!-- card start -->
+              <div class="custom-card h-100">
+                <div class="">
+                  <img
+                    class="img-fluid custom-card-img"
+                    src="images/video-cover.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body p-0">
+                  <div class="badge-div">
+                    <span class="custom-card-badge">Breakfast</span>
+                  </div>
+                  <div class="custom-card-title">
+                    <h1>Vegetable Chicken Chilli</h1>
+                  </div>
+                </div>
+                <div class="custom-card-footer">
+                  <button class="custom-card-btn w-100">Explore</button>
+                </div>
+              </div>
+              <!-- card end -->
             </div>
           </div>
         </div>

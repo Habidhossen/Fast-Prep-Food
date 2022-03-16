@@ -216,3 +216,10 @@ const displayMealDetails = (meal) => {
   modalContant.textContent = "";
   modalContant.appendChild(div);
 };
+// Breakfast meal
+const breakfastMeal = () => {
+  const url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast";
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => console.log(data.meals));
+};

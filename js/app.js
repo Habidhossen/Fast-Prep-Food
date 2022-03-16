@@ -34,7 +34,10 @@ const searchButton = () => {
 };
 const displayMeal = (meals) => {
   const resultContainer = document.getElementById("result-container");
-  for (const meal of meals) {
+  // clear content
+  resultContainer.innerHTML = "";
+  const sliceMeals = meals.slice(0, 16);
+  for (const meal of sliceMeals) {
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
@@ -65,13 +68,11 @@ const displayMeal = (meals) => {
   }
 };
 const loadMealDetails = (mealId) => {
-  console.log(mealId);
   fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then((response) => response.json())
     .then((data) => displayMealDetails(data.meals[0]));
 };
 const displayMealDetails = (meal) => {
-  console.log(meal);
   const modalContant = document.getElementById("modal-content");
   const div = document.createElement("div");
   div.classList.add("div");
@@ -86,7 +87,7 @@ const displayMealDetails = (meal) => {
               </div>
               <div class="modal-body">
                 <div class="row">
-                  <div class="col-5">
+                  <div class="col-12 col-sm-12 col-md-5 cold-lg-5">
                     <img
                       class="img-fluid rounded-3"
                       src="${meal.strMealThumb}"
@@ -107,7 +108,7 @@ const displayMealDetails = (meal) => {
                       ></span>
                     </a>
                   </div>
-                  <div class="col-7">
+                  <div class="col-12 col-sm-12 col-md-7 cold-lg-7">
                     <h1>${meal.strMeal}</h1>
 
                     <table class="table table-bordered table-sm">

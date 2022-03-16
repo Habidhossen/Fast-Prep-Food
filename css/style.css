@@ -31,7 +31,7 @@ html {
 ------------------------------*/
 .navbar-brand {
   font-family: "Pacifico", cursive;
-  font-size: 30px;
+  font-size: 22px;
   color: var(--primary-dark-color);
 }
 .navbar-brand span {
@@ -112,8 +112,8 @@ html {
 }
 .watch-video-container h1 {
   font-weight: 600;
-  font-size: 42px;
-  line-height: 58px;
+  font-size: 48px;
+  line-height: 60px;
   color: var(--primary-dark-color);
 }
 .watch-video-container p {
